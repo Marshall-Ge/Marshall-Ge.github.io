@@ -1,8 +1,8 @@
 name: "Marshall's blog"
 description: "葛小小的个人技术博客"
 
-avatar: https://pianfan.github.io/images/avatar.png
-favicon: https://pianfan.github.io/images/favicon.ico
+avatar: https://gexiaoxiao7.github.io/images/avatar.png
+favicon: https://gexiaoxiao7.github.io/images/favicon.ico
 
 navigation:
   - name: 首页
@@ -25,7 +25,7 @@ footer-links:
   twitter: 
   youtube:
 
-footer-text: Copyright (c) 2024 Pianfan
+footer-text: Copyright (c) 2024 Marshall
 
 url: https://gexiaoxiao7.github.io
 
