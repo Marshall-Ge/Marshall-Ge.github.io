@@ -2,7 +2,7 @@
 layout: post
 title: "怎样从别人那里要求获得代码/论文/模型/数据？"
 date:   2024-5-10
-tags: [Notice]
+tags: [Skills]
 comments: true
 author: marshall
 ---
