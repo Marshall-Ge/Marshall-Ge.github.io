@@ -35,7 +35,7 @@ author: marshall
 
 下图是Andrew Ng（吴恩达）给出的一套算法开发流程，当我们有一个想法的时候，我们应该快速用代码实现，然后进行实验，尽快得到实验反馈，从而调整我们的idea。现实中我们往往需要多轮下图的迭代来得到一个比较好的算法，而迭代的指标是实验给我们的反馈，也即上文提到的第一原则，能否实用。
 
-![image-20240901184522203](C:\Users\Marshall Ge\AppData\Roaming\Typora\typora-user-images\image-20240901184522203.png)
+![image-20240901184522203](../images/circle.png)
 
 
 
