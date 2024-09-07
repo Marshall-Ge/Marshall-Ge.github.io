@@ -42,11 +42,11 @@ Opinions are highly personal and please don't expect it to work for all. :D
 
 
 
-## 项目管理篇
+## **读纸篇**
 
-1. 作为project leader，要提前figure out 一些composable immediate milestones。这些milestone一定一开始要比较容易，i.e., actionable，因为前期正反馈很重要。
-2. 分工合作，找到对的人（co-author）做对的事。in other word，如果有个子任务你知道XXX特别擅长能在一天内给你干出来而你自己整得一周，那就尝试拉他入队伍，然后把这个子任务分给他。这样构成了一个共赢的局面：合作者用最小的力气节约了你大量时间，这样合作者往往也更愿意帮忙。至于找不到人的事情就别逃避，留给自己做。
-3. 去哪积累合作者？校内的，开会认识的，邮件联系的，想要推荐信的intern等等。不要shy也不要怕遇到不合适的，worst case大不了就[discontinue](https://zhida.zhihu.com/search?q=discontinue&zhida_source=entity&is_preview=1)，nothing to lose. :)
-
-
+1. 首先这个section很见仁见智，大家看看笑话就好。
+2. 纸读多了你会发现即使是所谓顶会文章可能十有八九都是“trash”，所以我personally一般不randomly读paper，因为ROI太低。然后我比较乐意读senior ppl推荐的老一点的“test-of-time”材料，ROI会比较高。
+3. 如果想知识充能，可以去读一读或者参加一些tutorial，这样时间利用率更高。
+4. Reading list candidates几乎来自于别人推荐（labmate，推特等等）。
+5. 先去找有没有作者做的[slides](https://zhida.zhihu.com/search?q=slides&zhida_source=entity&is_preview=1)，有slides就优先结合slides读。
 
