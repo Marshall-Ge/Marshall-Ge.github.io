@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "CS Phd 上分总结（转）"
-date:   2024-9-1
+date:   2024-9-8
 tags: [Skills]
 comments: true
 author: marshall
