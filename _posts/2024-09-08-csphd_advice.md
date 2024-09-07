@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "CS Phd上分总结（转）"
+title: "用轮子？造轮子？还是拆轮子？"
 date:   2024-9-8
 tags: [Skills]
 comments: true
@@ -12,7 +12,7 @@ author: marshall
 
 Opinions are highly personal and please don't expect it to work for all. :D
 
-## **纸篇**
+## 纸篇
 
 1. Produce [the first paper](https://zhida.zhihu.com/search?q=the+first+paper&zhida_source=entity&is_preview=1): 你需要paper才能毕业，没paper时的目标就是produce a paper。在这个过程中不用担心自己第一篇论文不够完美，往往前几篇文章的最大意义就是Academic Training。
 2. 保持单调递增：expect每个新project能达到之前所有工作没达到的高度。这个高度可以是多维度的：[novelty](https://zhida.zhihu.com/search?q=novelty&zhida_source=entity&is_preview=1)，quality，immediate usefulness，intellectual challenge等等。有一即可。
@@ -24,7 +24,7 @@ Opinions are highly personal and please don't expect it to work for all. :D
 
 
 
-## **心理健康篇**
+## 心理健康篇
 
 1. 多喝水，多睡觉
 2. 不要七天连轴转，容易突然陷入抑郁然后反手就是一个x周无法振作的penalty
@@ -33,7 +33,7 @@ Opinions are highly personal and please don't expect it to work for all. :D
 
 
 
-## **项目管理篇**
+## 项目管理篇
 
 1. 作为project leader，要提前figure out 一些composable immediate milestones。这些milestone一定一开始要比较容易，i.e., actionable，因为前期正反馈很重要。
 2. 分工合作，找到对的人（co-author）做对的事。in other word，如果有个子任务你知道XXX特别擅长能在一天内给你干出来而你自己整得一周，那就尝试拉他入队伍，然后把这个子任务分给他。这样构成了一个共赢的局面：合作者用最小的力气节约了你大量时间，这样合作者往往也更愿意帮忙。至于找不到人的事情就别逃避，留给自己做。
@@ -41,7 +41,7 @@ Opinions are highly personal and please don't expect it to work for all. :D
 
 
 
-## **项目管理篇**
+## 项目管理篇
 
 1. 作为project leader，要提前figure out 一些composable immediate milestones。这些milestone一定一开始要比较容易，i.e., actionable，因为前期正反馈很重要。
 2. 分工合作，找到对的人（co-author）做对的事。in other word，如果有个子任务你知道XXX特别擅长能在一天内给你干出来而你自己整得一周，那就尝试拉他入队伍，然后把这个子任务分给他。这样构成了一个共赢的局面：合作者用最小的力气节约了你大量时间，这样合作者往往也更愿意帮忙。至于找不到人的事情就别逃避，留给自己做。
