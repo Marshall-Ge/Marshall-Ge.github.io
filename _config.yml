@@ -51,6 +51,8 @@ sass:
 
 # gittalk
 gitalk:
+  labels:
+    - gitalk
   enable: true
   clientID: Ov23liI9BNSBL8HKjtLN
   clientSecret: 8f0e2abf7b3026fe9b30548bb2a1856f0044160a
