@@ -7,6 +7,11 @@ comments: true
 author: marshall
 ---
 
+本文记录了2021蓝桥杯国赛JavaB组的部分题解
+
+<!-- more -->
+<!-- meta name="description" -->
+
 ## 1. 整数范围
 
 ```java

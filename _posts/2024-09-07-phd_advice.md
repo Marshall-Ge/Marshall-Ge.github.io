@@ -10,6 +10,7 @@ author: marshall
 本文转载自知乎，原文链接：[CS PhD上分总结 - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/666680698)，作者是一名UIUC的 CS Phd。看完作者给出的几条建议之后深有感触，特此记录。
 
 <!-- more -->
+<!-- meta name="description" -->
 
 Opinions are highly personal and please don't expect it to work for all. :D
 

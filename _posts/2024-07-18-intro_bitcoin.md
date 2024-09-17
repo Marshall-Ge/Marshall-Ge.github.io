@@ -10,6 +10,7 @@ author: marshall
 本文转载自[How the Bitcoin protocol actually works – DDI (michaelnielsen.org)](https://michaelnielsen.org/ddi/how-the-bitcoin-protocol-actually-works/) ，笔者对文章进行了翻译工作。
 
 <!-- more -->
+<!-- meta name="description" -->
 
 有成千上万篇文章声称要解释比特币这种点对点在线货币。其中大多数文章对底层加密协议的介绍都是一笔带过，忽略了许多细节。即使是那些深入研究比特币的文章，也往往忽略了一些关键点。这篇文章的目的是要以清晰易懂的方式解释比特币协议背后的主要思想。我们将从基本原理入手，从理论上对协议的工作原理有一个大致的了解，然后再深入到细枝末节，研究比特币交易中的原始数据。
 

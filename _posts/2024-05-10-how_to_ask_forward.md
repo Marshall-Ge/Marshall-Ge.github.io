@@ -10,6 +10,9 @@ author: marshall
 本文转载自南京大学吴建鑫老师
 原文链接：https://cs.nju.edu.cn/wujx/HowToRequestCode.html
 
+<!-- more -->
+<!-- meta name="description" -->
+
 - [为什么有人能要到代码/论文/模型/数据，而我就要不到？](#为什么有人能要到代码论文模型数据而我就要不到)
   - [一个虚拟的故事](#一个虚拟的故事)
   - [两段真实的经历](#两段真实的经历)

@@ -9,7 +9,8 @@ author: marshall
 
 对散列表数据结构的简单分析记录
 
-<!--more-->
+<!-- more -->
+<!-- meta name="description" -->
 
 - [一、什么是Hash表](#一什么是hash表)
 - [二、哈希函数的构造方法](#二哈希函数的构造方法)
