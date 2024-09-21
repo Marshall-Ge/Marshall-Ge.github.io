@@ -7,7 +7,7 @@ comments: true
 author: marshall
 ---
 
-本文着重于整理各种树结构与基本定义，若要了解相关的算法，请移步算法篇。
+本文着重于整理各种树结构与基本定义，若要了解相关的树上操作，请移步操作篇。
 
 <!-- more -->
 <!-- meta name="description" -->
