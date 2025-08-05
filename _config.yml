@@ -1,5 +1,5 @@
 name: "Marshall's blog"
-description: "葛小小的个人技术博客"
+description: "Marshall的个人技术博客"
 
 avatar: https://Marshall-Ge.github.io/images/avatar.png
 favicon: https://Marshall-Ge.github.io/images/favicon.ico
@@ -35,6 +35,8 @@ paginate_path: /page:num/
 # The release of Jekyll Now
 version: v1.2.0
 
+highlighter: rouge
+markdown: kramdown
 # Jekyll 3 now only supports Kramdown for Markdown
 kramdown:
   # Use GitHub flavored markdown, including triple backtick fenced code blocks
