@@ -1,40 +1,58 @@
 ---
 layout: post
-title: "【源码分析】深入理解Ray的存储机制"
+title: "Exploring the Integration of the Latest Version of vLLM with Ray 2.35.0: Gaps, Issues, and Challenges"
 date:   2025-07-29
-tags: [分布式]
+tags: [AI Infra, 分布式]
 comments: true
 author: marshall
 ---
 
-最近大半年都在做AI Infra相关的学习，也算是小有收获，参与了ray/vllm社区，提了一些issue和pr😊
+最近大半年都在做AI Infra相关的学习，也算是小有收获，参与了Ray/vLLM社区，提了一些issue和pr😊，这个领域很合我胃口，后续可能也会focus这边继续深耕。
 
-因工作需要，笔者对Ray的存储系统有比较深入的探索，本文会基于源码来分析Ray中存储系统的架构和设计，另外也会讨论目前方案存在的一些缺陷和社区的on going proposal
+背景：公司内部用的ray是魔改的ray2.35.0，而业务部门有需求升级到最新版本的vllm，官方的setup已经要求依赖的ray的版本大于等于2.46，因此有必要测试一下这之间有多少Gap。通过这篇文章（更像是实验记录），你可以快速了解到Ray与vLLM的耦合程度，文中也给出了很多源码链接帮助理解。
+
+声明：本文涉及的内容已经过筛选，确保全部来源于开源社区。另外由于是直接搬运个人给公司内部写的report，因此语言是英文，见谅。
 
 <!-- more -->
 <!-- meta name="description" -->
 
-# 整体架构
+## Main source codes
 
-![alt text](../images/ray_arch.png)
+vLLM set Ray as default multi-node executor backend, the main logic are as follows:
 
-Ray 集群是由一个或者多个 worker 节点组成，每个 worker 节点由以下物理进程组成：
+https://github.com/vllm-project/vllm/blob/main/vllm/executor/ray_distributed_executor.py
+https://github.com/vllm-project/vllm/blob/main/vllm/executor/ray_utils.py
 
-- 一个或多个的 worker 进程，负责任务的提交和执行，worker进程要么是无状态的，要么是一个带有状态的actor。
-- raylet，用于管理每个节点上的共享资源，与worker进程不同的是，raylet 是在所有worker中共享的：
-    1. Scheduler，负责资源管理、任务放置和完成将 Task 的参数存储在分布式的 Object Store 中；
-    2. Object Store，一个共享内存存储负责存储、转移和溢出（spilling，如果 Object Store 满了会移动到外部存储）大型对象。集群中各个 Object Store 共同构建了 Ray 的分布式对象存储。
+Below are the core features of Ray has been used by vLLM:
+- Ray Actors / Workers
+- Ray DAG (Compiled Graphs)
+- Ray Cluster (Placement Groups, Resources…)
 
-另外，Ray集群通过一个Head Node集中管理整个Ray集群的状态，其含有的GCS进程会记录集群的重要元数据（MetaData），GCS进程可以与外部的持久化（persistent）数据库进行连接（Ray官方的实现是与Redis进行连接实际上并不一定用Redis，任何KVstore数据库都可以）。这层持久化连接为Ray集群提供了容错机制，当Cluster因为某些原因挂掉之后，我们可以利用外部数据库的history MetaData来重建Ray Cluster。
+## Use Case Limitations
 
-综上所述，我们对Ray的存储系统结构做一个大致的总结，可以分为四个大类：
-- 文件系统存储（Filesystem Storage），主要存储的是日志文件，Ray会将子进程产生的日志存储到所在节点的文件系统中
-- 内存储存（In-Memory Storage）, 这里一般指的是程序进程中产生的内存占用，比如Ray会将Task Event的数据存储到GCS server的一个[vector](https://github.com/ray-project/ray/blob/master/src/ray/gcs/gcs_server/gcs_task_manager.h#L198)变量中去，因此当GCS挂了之后，这些In-Memory的数据也会丢失
-- 外部持久化存储（External persistent Storage），GCS会与外部数据库（如Redis）进行连接，并将部分的数据备份到外部数据库中，这样就形成了持久化的存储
+Ray Data LLM API
 
-# Filesystem Storage
+https://docs.ray.io/en/latest/data/working-with-llms.html#vllm-llm
+https://docs.vllm.ai/en/latest/serving/offline_inference.html?h=ray#ray-data-llm-api
 
+```{python}
+import ray  # Requires ray>=2.44.1
+from ray.data.llm import vLLMEngineProcessorConfig, build_llm_processor
 
-# In-Memory Storage
+config = vLLMEngineProcessorConfig(model_source="unsloth/Llama-3.2-1B-Instruct")
+processor = build_llm_processor(
+    config,
+    preprocess=lambda row: {
+        "messages": [
+            {"role": "system", "content": "You are a bot that completes unfinished haikus."},
+            {"role": "user", "content": row["item"]},
+        ],
+        "sampling_params": {"temperature": 0.3, "max_tokens": 250},
+    },
+    postprocess=lambda row: {"answer": row["generated_text"]},
+)
 
-# Persistent Storage
+ds = ray.data.from_items(["An old silent pond..."])
+ds = processor(ds)
+ds.write_parquet("local:///tmp/data/")
+```

@@ -1,8 +1,8 @@
 name: "Marshall's blog"
 description: "葛小小的个人技术博客"
 
-avatar: https://gexiaoxiao7.github.io/images/avatar.png
-favicon: https://gexiaoxiao7.github.io/images/favicon.ico
+avatar: https://Marshall-Ge.github.io/images/avatar.png
+favicon: https://Marshall-Ge.github.io/images/favicon.ico
 
 navigation:
   - name: 首页
@@ -20,14 +20,14 @@ footer-links:
   zhihu: 
   email: marshall_gefxiang@163.com
   facebook:
-  github: gexiaoxiao7
+  github: Marshall-Ge
   rss: # just type anything here for a working RSS icon
   twitter: 
   wechat: 19857950790
 
 footer-text: Copyright (c) 2024 Marshall
 
-url: https://gexiaoxiao7.github.io
+url: https://Marshall-Ge.github.io
 
 permalink: /:title/
 paginate_path: /page:num/
@@ -55,9 +55,9 @@ sass:
 #   enable: true
 #   clientID: Ov23liI9BNSBL8HKjtLN
 #   clientSecret: 8f0e2abf7b3026fe9b30548bb2a1856f0044160a
-#   repo: gexiaoxiao7.github.io
-#   owner: gexiaoxiao7
-#   admin: gexiaoxiao7
+#   repo: Marshall-Ge.github.io
+#   owner: Marshall-Ge
+#   admin: Marshall-Ge
 
 giscus:
   enable: true
