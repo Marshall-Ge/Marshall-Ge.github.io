@@ -7,6 +7,9 @@ comments: true
 author: marshall
 ---
 
+<!-- more -->
+<!-- meta name="description" -->
+
 # 经典Leetcode题目
 
 ## 反转链表
