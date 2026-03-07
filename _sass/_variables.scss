@@ -19,9 +19,9 @@ $helvetica: Helvetica, Arial, sans-serif;
 $helveticaNeue: "Helvetica Neue", Helvetica, Arial, sans-serif;
 $georgia: Georgia, serif;
 
-// Fonts
-$base-font: "Noto Serif","PT Serif",source-han-serif-sc, "Source Han Serif SC", "Source Han Serif CN", "Source Han Serif TC", "Source Han Serif TW", "Source Han Serif","Songti SC", SimSon, serif;
-$code-font: 'Menlo', 'Courier New', 'Monaco', 'Spoqa Han Sans', monospace;
+// Fonts - 优化中英混排：英文优先使用系统衬线字体，中文回退到 Noto Serif SC
+$base-font: "Noto Serif SC", "Noto Serif", "Source Han Serif SC", "PT Serif", Georgia, "Times New Roman", serif;
+$code-font: 'SF Mono', 'Monaco', 'Menlo', 'Consolas', 'Liberation Mono', 'Courier New', monospace;
 
 // Font sizes
 $base-font-size: 16px;

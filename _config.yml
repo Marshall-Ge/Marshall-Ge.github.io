@@ -41,6 +41,8 @@ markdown: kramdown
 kramdown:
   # Use GitHub flavored markdown, including triple backtick fenced code blocks
   input: GFM
+  # 启用 MathJax 数学引擎，避免公式中的 _ 等字符被 Markdown 解析破坏
+  math_engine: mathjax
   # Jekyll 3 and GitHub Pages now only support rouge for syntax highlighting
   syntax_highlighter: rouge
   syntax_highlighter_opts:
