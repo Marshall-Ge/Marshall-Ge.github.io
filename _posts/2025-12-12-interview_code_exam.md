@@ -32,10 +32,10 @@ public:
         ListNode* pre = nullptr;
         ListNode* tmp = new ListNode();
         while(cur){
-            tmp = cur->next;
-            cur->next = pre;
-            pre = cur;
-            cur = tmp;
+            tmp = cur.next
+            cur.next = pre
+            pre = cur
+            cur = tmp
         }
         return pre;
     }
@@ -328,8 +328,64 @@ class Solution:
         return max_len
 ```
 
-# Triton/CUDA
+## 蚂蚁爬杆
 
+```python
+def calculate_ant_time(L, positions):
+    if len(positions) == 0:
+        return (0.0, 0.0)
+    min_time = []
+    max_time = []
+    for pos in positions:
+        min_time.append(min(pos, L-pos))
+        max_time.append(max(pos, L-pos))
+    return max(min_time), max(max_time)
+```
+
+## 二叉树层序遍历
+
+```python
+def levelOrder(root):
+    if not root:
+        return
+    res = []
+    st = [root]
+
+    while st:
+        lay = []
+        lay_val = []
+        for node in st:
+            lay_val.append(node.val)
+            if node.left:
+                lay.append(node.left)
+            if node.right:
+                lay.append(node.right)
+        st = lay
+        res.append(lay_val)
+    return res
+
+
+def levelOrder(root):
+    if not root:
+        return
+    res = []
+    st = [root]
+
+    while st:
+        lay = []
+        lay_val = []
+        for node in st:
+            lay_val.append(node.val)
+            if node.left:
+                lay.append(node.left)
+            if node.right:
+                lay.append(node.right)
+        st = lay
+        res.append(lay_val)
+    return res
+```
+
+# Triton/CUDA
 ## Base matrix multiply
 ```c++
 __global__ void cudaMatrixMultiplyBase(float *A, float *B, float *C, int M, int N, int K){
@@ -463,6 +519,15 @@ class RMSNorm(nn.Module):
         rms = torch.sqrt(torch.mean(x**2, dim=-1, keepdim=True) + self.eps)
         return x / rms * weight 
 
+class RMSNorm(nn.Module):
+    def __init__(self, dim, eps=1e-6):
+        super.__init__()
+        self.eps = eps
+        self.weight = nn.Parameter(torch.ones(dim))
+    
+    def forward():
+        rms = torch.sqrt(torch.mean(x**2, dim=-1, keepdim=True) + self.eps)
+        return x / rms * weight
 
 class LayerNorm(nn.Module):
     def __init__(self, hidden_size, eps=1e-6):
@@ -478,6 +543,24 @@ class LayerNorm(nn.Module):
         output = self.gamma*x_norm + self.beta
         return output
 
+    def forward(self, x):
+        x_mean = x.mean(dim=-1, keepdim=True)
+        x_var = x.var(dim-1, keepdim=True)
+        x_norm = (x - x_mean) / (torch.sqrt(x_var + self.eps))
+        output = self.gamma*x_norm + self.beta
+        return output
+
+
 ```
 
 
+## Softmax
+
+```python
+def softmax(x):
+    max_x = max(x)
+    exp_x = [math.exp(i - max_x) for i in x]
+    sum_exp_x = sum(exp_x)
+    output = [ e / sum_exp_x for e in exp_x]
+    return output
+```
