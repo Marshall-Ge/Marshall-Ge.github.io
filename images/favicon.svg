@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <title>腊肠犬正脸</title>
+  <g stroke="#49291e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="7" y="17" width="17" height="39" rx="8.5" fill="#713d28"/>
+    <rect x="40" y="17" width="17" height="39" rx="8.5" fill="#713d28"/>
+    <rect x="18" y="10" width="28" height="44" rx="14" fill="#bd703b"/>
+  </g>
+  <ellipse cx="25" cy="24" rx="3" ry="1.5" fill="#e7aa6c"/>
+  <ellipse cx="39" cy="24" rx="3" ry="1.5" fill="#e7aa6c"/>
+  <ellipse cx="32" cy="42" rx="10" ry="11" fill="#e7aa6c"/>
+  <g fill="#261d19">
+    <circle cx="25" cy="29" r="2.5"/>
+    <circle cx="39" cy="29" r="2.5"/>
+    <ellipse cx="32" cy="40" rx="5.5" ry="4"/>
+  </g>
+  <g fill="#fff1d9"><circle cx="24.3" cy="28.2" r=".8"/><circle cx="38.3" cy="28.2" r=".8"/></g>
+  <path d="M28 47H36V50Q36 54 32 54Q28 54 28 50Z" fill="#e68c8b" stroke="#49291e" stroke-width="1.5"/>
+  <path d="M32 44V47M26 45Q26 50 32 47Q38 50 38 45" fill="none" stroke="#49291e" stroke-width="2" stroke-linecap="round"/>
+</svg>
