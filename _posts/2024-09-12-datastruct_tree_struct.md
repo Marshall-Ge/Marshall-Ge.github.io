@@ -1,4 +1,5 @@
 ---
+pdf: /assets/pdfs/2024-09-12-datastruct_tree_struct.pdf
 layout: post
 title: "数据结构——树(结构篇)"
 date:   2024-9-12

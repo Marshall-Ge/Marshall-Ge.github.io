@@ -82,4 +82,8 @@ exclude:
   - Gemfile.lock
   - LICENSE
   - README.md
-
+  - node_modules
+  - scripts
+  - package.json
+  - package-lock.json
+  - tmp

@@ -1,4 +1,5 @@
 ---
+pdf: /assets/pdfs/2026-03-15-cot_chain-of-thought_adaptive.pdf
 layout: post
 title: "思考要有 “⻩金分寸” :自适应思考让大模型张弛有度、收放自如"
 date:   2026-03-15

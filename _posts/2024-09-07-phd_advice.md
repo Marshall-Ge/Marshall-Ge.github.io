@@ -1,4 +1,5 @@
 ---
+pdf: /assets/pdfs/2024-09-07-phd_advice.pdf
 layout: post
 title: "CS Phd 上分总结（转）"
 date:   2024-9-7

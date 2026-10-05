@@ -1,4 +1,5 @@
 ---
+pdf: /assets/pdfs/2024-09-01-build_or_use.pdf
 layout: post
 title: "用轮子？造轮子？还是拆轮子？"
 date:   2024-9-1

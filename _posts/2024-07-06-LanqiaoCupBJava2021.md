@@ -1,4 +1,5 @@
 ---
+pdf: /assets/pdfs/2024-07-06-LanqiaoCupBJava2021.pdf
 layout: post
 title: "蓝桥杯国赛JavaB组2021"
 date:   2024-7-06

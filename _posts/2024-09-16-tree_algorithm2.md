@@ -1,4 +1,5 @@
 ---
+pdf: /assets/pdfs/2024-09-16-tree_algorithm2.pdf
 layout: post
 title: "数据结构——树(高阶操作篇)"
 date:   2024-9-18

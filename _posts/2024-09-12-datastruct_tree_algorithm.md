@@ -1,4 +1,5 @@
 ---
+pdf: /assets/pdfs/2024-09-12-datastruct_tree_algorithm.pdf
 layout: post
 title: "数据结构——树(初阶操作篇)"
 date:   2024-9-15

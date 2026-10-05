@@ -1,4 +1,5 @@
 ---
+pdf: /assets/pdfs/2025-12-05-talk_2_yourself.pdf
 layout: post
 title: "技术之外：学会和自己对话"
 date:   2025-12-05

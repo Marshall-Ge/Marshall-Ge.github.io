@@ -1,4 +1,5 @@
 ---
+pdf: /assets/pdfs/2024-07-18-intro_bitcoin.pdf
 layout: post
 title: "比特币协议的实际运作方式（转译）"
 date:   2024-7-18

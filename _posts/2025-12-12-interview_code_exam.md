@@ -1,4 +1,5 @@
 ---
+pdf: /assets/pdfs/2025-12-12-interview_code_exam.pdf
 layout: post
 title: "面试手撕题集合（LLM/Infra/算法方向）"
 date:   2025-12-25

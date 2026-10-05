@@ -4,7 +4,7 @@
   <body>
     {% include nav.html %}
 
-    {% if page.toc==true %}
+    {% if page.toc==true and page.pdf == nil %}
       <aside class="toc">
         {% include toc.html html=content %}
       </aside>
@@ -19,7 +19,7 @@
     {% include analytics.html %}
   </body>
 
-  {% if page.toc==true %}
+  {% if page.toc==true and page.pdf == nil %}
   <script>
     document.getElementById("main").classList.add("withtoc");
   </script>

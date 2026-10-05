@@ -1,0 +1,82 @@
+{
+  "2024-05-10-how_to_ask_forward.md": {
+    "pdf": "/assets/pdfs/2024-05-10-how_to_ask_forward.pdf",
+    "sha256": "b737e12d6861ebcb8fc34278471209a8a2c6816c30e13847ce448dddd846c450"
+  },
+  "2024-05-20-65840_lab2A.md": {
+    "pdf": "/assets/pdfs/2024-05-20-65840_lab2A.pdf",
+    "sha256": "45db7b82cfc4dbc470dc086aeb7873fc012e691a4392cb2c731cd3acba7eb314"
+  },
+  "2024-05-20-65840_lab2B.md": {
+    "pdf": "/assets/pdfs/2024-05-20-65840_lab2B.pdf",
+    "sha256": "7fafc308eb2a8453c3678c7e7506e08abbfa696a275af485514450ea7a0877c8"
+  },
+  "2024-05-27-LanqiaoCupBJava2022.md": {
+    "pdf": "/assets/pdfs/2024-05-27-LanqiaoCupBJava2022.pdf",
+    "sha256": "aea2f6f9baa3558bc25fe810432a4762f3efe1de4895c6952feba611ef9d29b9"
+  },
+  "2024-05-27-LanqiaoCupBJava2023.md": {
+    "pdf": "/assets/pdfs/2024-05-27-LanqiaoCupBJava2023.pdf",
+    "sha256": "a046ae9a0779acfeb294ea81551acab98e4d8b56c4dcdd064fa4a05e1fe69b62"
+  },
+  "2024-07-06-LanqiaoCupBJava2021.md": {
+    "pdf": "/assets/pdfs/2024-07-06-LanqiaoCupBJava2021.pdf",
+    "sha256": "69171ff0f34522d6e47e21ffafdca3b8f2d1d23d408c32f8cb7a7656556babbf"
+  },
+  "2024-09-01-build_or_use.md": {
+    "pdf": "/assets/pdfs/2024-09-01-build_or_use.pdf",
+    "sha256": "a40a965db478be853e24579c4e0da189c8beac8978feabefedea64908dff28a9"
+  },
+  "2024-09-07-phd_advice.md": {
+    "pdf": "/assets/pdfs/2024-09-07-phd_advice.pdf",
+    "sha256": "f675ac2477ae639abd94ec3357195930b42ad435e05b3fc3ceca964c17ffaba0"
+  },
+  "2024-09-12-datastruct_hash.md": {
+    "pdf": "/assets/pdfs/2024-09-12-datastruct_hash.pdf",
+    "sha256": "5241697db962707ff9128c38cf6b2b1b77a8ca824f74bd179f08ff0bdd46d61d"
+  },
+  "2024-09-12-datastruct_tree_algorithm.md": {
+    "pdf": "/assets/pdfs/2024-09-12-datastruct_tree_algorithm.pdf",
+    "sha256": "6dce02a92bf81a81746a3e32924dfe25185ef3fe874ee23af502213fcdac941b"
+  },
+  "2024-09-12-datastruct_tree_struct.md": {
+    "pdf": "/assets/pdfs/2024-09-12-datastruct_tree_struct.pdf",
+    "sha256": "06fff46907c921ee0ab5d7fcd4990e3556bdb4943db4d00be323e1fc3ad564ca"
+  },
+  "2024-09-16-tree_algorithm2.md": {
+    "pdf": "/assets/pdfs/2024-09-16-tree_algorithm2.pdf",
+    "sha256": "cf89c278788631f2e3b4dac1d81f2997e087655df1fb32077ed618e2128ba07e"
+  },
+  "2024-10-19-get_master.md": {
+    "pdf": "/assets/pdfs/2024-10-19-get_master.pdf",
+    "sha256": "31f65251c432cde452280ca67e2b975c1e3d8483566cd882ba8e0e3e1ad29832"
+  },
+  "2025-07-28-ray_vllm.md": {
+    "pdf": "/assets/pdfs/2025-07-28-ray_vllm.pdf",
+    "sha256": "47f056c529c7c22094cbfbfc72aeb4594949f70c6445b72dd34bd68ea78eaec3"
+  },
+  "2025-12-05-talk_2_yourself.md": {
+    "pdf": "/assets/pdfs/2025-12-05-talk_2_yourself.pdf",
+    "sha256": "d3908b20c14a1b510389f6e22d39be50986250e3d94b497789e478d063217f6e"
+  },
+  "2025-12-12-interview_code_exam.md": {
+    "pdf": "/assets/pdfs/2025-12-12-interview_code_exam.pdf",
+    "sha256": "2e0d1d341ee33f14f030f5c01a4c30dd25badee09787a36aa7a0e2e2fa9966fe"
+  },
+  "2026-03-15-cot_chain-of-thought_adaptive.md": {
+    "pdf": "/assets/pdfs/2026-03-15-cot_chain-of-thought_adaptive.pdf",
+    "sha256": "9afb0cceb2c4d922506de25a05294994dd4a40b53f0217f0f6c3143358f499d5"
+  },
+  "2026-03-29-rethink_ai_tools.md": {
+    "pdf": "/assets/pdfs/2026-03-29-rethink_ai_tools.pdf",
+    "sha256": "b638e18b96b3bce059c7f2d855794db2b79e523dac814e3a0751f7924852460c"
+  },
+  "2026-03-97-op_ana.md": {
+    "pdf": "/assets/pdfs/2026-03-97-op_ana.pdf",
+    "sha256": "82d21d96893adba736d20d47205dcececbe7f80a067e16986a772c3170f027eb"
+  },
+  "2024-07-18-intro_bitcoin.md": {
+    "pdf": "/assets/pdfs/2024-07-18-intro_bitcoin.pdf",
+    "sha256": "ea48b49b002698bde1179d3eaea4be5ca86d98976f13e3e680818c74c947bd6e"
+  }
+}

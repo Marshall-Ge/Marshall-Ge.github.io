@@ -6,7 +6,7 @@ layout: default
   
   <h1>{{ page.title }}</h1>
 
-  <div clsss="meta">
+  <div class="meta">
     <span class="date">
       {{ page.date | date: "%Y-%m-%d" }}
     </span>
@@ -22,8 +22,15 @@ layout: default
     </ul>
   </div>
 
-  <div class="entry">
-    {{ content }}
+  <div class="entry pdf-entry">
+    {% assign pdf_url = page.pdf | relative_url %}
+    <div class="pdf-actions">
+      <a href="{{ pdf_url }}" target="_blank" rel="noopener">打开 PDF</a>
+      <a href="{{ pdf_url }}" download>下载 PDF</a>
+    </div>
+    <object class="pdf-viewer" data="{{ pdf_url }}#view=FitH" type="application/pdf" aria-label="{{ page.title | escape }} PDF">
+      <p>当前浏览器无法内嵌显示 PDF，请<a href="{{ pdf_url }}">打开文章 PDF</a>阅读。</p>
+    </object>
   </div>
 
 

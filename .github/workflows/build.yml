@@ -10,21 +10,20 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout Repository
-      uses: actions/checkout@v3
-      
-    - name: Setup Node.js environment
-      uses: actions/setup-node@v4.0.1
+    - uses: actions/checkout@v4
+    - uses: actions/setup-node@v4
       with:
-        node-version: 20
-        
-    - run: npm install -g bats
-    
-    - run: bats -v
-      
-    - name: Upload a Build Artifact
-      uses: actions/upload-artifact@v4.3.0
+        node-version: 22
+        cache: npm
+    - run: npm ci
+    - run: npm run pdf:check
+    - uses: ruby/setup-ruby@v1
       with:
-        name: 'my-blog'
-        path: '_site'
+        ruby-version: '3.3'
+        bundler-cache: true
+    - run: bundle exec jekyll build --trace
+    - uses: actions/upload-artifact@v4
+      with:
+        name: my-blog
+        path: _site
         

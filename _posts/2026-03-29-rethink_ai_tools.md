@@ -1,4 +1,5 @@
 ---
+pdf: /assets/pdfs/2026-03-29-rethink_ai_tools.pdf
 layout: post
 title: "Codex、n8n、OpenClaw...当我将工作流全部交给AI自动化后，我陷入了技术虚无主义"
 date:   2026-03-29

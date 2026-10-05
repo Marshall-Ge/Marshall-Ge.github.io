@@ -1,4 +1,5 @@
 ---
+pdf: /assets/pdfs/2024-10-19-get_master.pdf
 layout: post
 title: "记录一下我的保研之旅"
 date:   2024-10-19
