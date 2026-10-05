@@ -28,11 +28,7 @@ permalink: /tags/
       {% for post in tag[1] %}
         {% if post.title != null %}
           <li>
-            {% if post.link %}
-              <a href="{{ post.link }}">
-            {% else %}
-              <a href="{{ site.baseurl }}{{ post.url }}">
-            {% endif %}
+              <a href="{{ post.pdf | relative_url }}">
                 {{ post.title }}
               </a>
               <time>{{ post.date | date: "%Y-%m-%d" }}</time>

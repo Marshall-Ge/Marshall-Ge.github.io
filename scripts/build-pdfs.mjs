@@ -26,8 +26,18 @@ try { manifest = JSON.parse(await fs.readFile(path.join(output, 'manifest.json')
 catch (error) { if (error.code !== 'ENOENT') throw error; }
 await fs.mkdir(output, { recursive: true });
 let browser;
+let chineseFontCss = '';
 try {
   if (!check) {
+    // Use locally licensed fonts without distributing font files in the site.
+    const songPath = process.env.SIMSUN_PATH || (process.platform === 'darwin'
+      ? '/Applications/Microsoft Word.app/Contents/Resources/DFonts/Simsun.ttc' : null);
+    let songSource = 'local("SimSun"), local("宋体")';
+    if (songPath) {
+      await fs.access(songPath);
+      songSource += `, url("${pathToFileURL(path.resolve(songPath)).href}")`;
+    }
+    chineseFontCss = `@font-face { font-family: "Blog Chinese"; src: ${songSource}; }`;
     const options = { headless: true };
     if (process.env.CHROME_PATH) options.executablePath = process.env.CHROME_PATH;
     else if (process.platform === 'darwin') options.executablePath = '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome';
@@ -58,9 +68,15 @@ try {
     const tempDir = path.join(root, 'tmp/pdfs');
     await fs.mkdir(tempDir, { recursive: true });
     const htmlPath = path.join(tempDir, file.replace(/\.md$/, '.html'));
-    await fs.writeFile(htmlPath, html);
+    await fs.writeFile(htmlPath, html.replace('<style>', `<style>${chineseFontCss}\n`));
     await page.goto(pathToFileURL(htmlPath).href, { waitUntil: 'networkidle' });
     await page.evaluate(() => document.fonts.ready);
+    await page.evaluate(async () => {
+      for (const [font, sample] of [['Blog Latin', 'English'], ['Blog Chinese', '中文宋体']]) {
+        const loaded = await document.fonts.load(`16px "${font}"`, sample);
+        if (!loaded.length) throw new Error(`Required font unavailable: ${font}`);
+      }
+    });
     const broken = await page.evaluate(async () => {
       await Promise.all([...document.images].map(img => img.decode().catch(() => {})));
       return [...document.images].filter(img => !img.naturalWidth).map(img => img.src);
@@ -86,7 +102,7 @@ try {
     if (mathErrors.length) throw new Error(`${file}: invalid formulas: ${mathErrors.join(', ')}`);
     await page.pdf({ path: destination, format: 'A4', printBackground: true, preferCSSPageSize: true,
       displayHeaderFooter: true, headerTemplate: '<span></span>',
-      footerTemplate: '<div style="font-size:9px;color:#798391;width:100%;text-align:center"><span class="pageNumber"></span> / <span class="totalPages"></span></div>' });
+      footerTemplate: '<div style="font-family:Times New Roman;font-size:9px;color:#798391;width:100%;text-align:center"><span class="pageNumber"></span> / <span class="totalPages"></span></div>' });
     // Only add the PDF reference; leave the original Markdown and YAML intact.
     if (data.pdf !== pdf) {
       const updated = data.pdf

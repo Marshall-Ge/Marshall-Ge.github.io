@@ -27,14 +27,14 @@ layout: default
 	searchInput: document.getElementById('search-input'),
 	resultsContainer: document.getElementById('results-container'),
 	json: '{{ site.baseurl }}/search.json',
-	searchResultTemplate: '<li><a href="{url}?query={query}" title="{desc}">{title}</a></li>',
+	searchResultTemplate: '<li><a href="{url}" title="{title}">{title}</a></li>',
 	noResultsText: 'No results found',
 	limit: 10,
 	fuzzy: false,
 	exclude: ['Welcome']
   })
 </script>
- 
+
 {% if site.posts.size == 0 %}
   <h2>No post found</h2>
 {% endif %}
@@ -44,7 +44,7 @@ layout: default
   {% unless post.draft %}
     <article class="post">
       <h1>
-        <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+        <a href="{{ post.pdf | relative_url }}">{{ post.title }}</a>
       </h1>
 
       <div class="meta">
@@ -67,7 +67,7 @@ layout: default
         {{ post.excerpt | truncate: 200 }}
       </div>
 
-      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
+      <a href="{{ post.pdf | relative_url }}" class="read-more">Read More</a>
     </article>
   {% endunless %}
   {% endfor %}

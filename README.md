@@ -4,7 +4,7 @@
 
 ## 写作与生成 PDF
 
-Markdown 源文保留在 `_posts/`，用于编辑、首页摘要及订阅。文章页通过 front matter 的 `pdf` 字段加载 `assets/pdfs/` 中的 PDF，保留原有文章 URL、分类和评论，并提供独立打开与下载入口。不支持内嵌 PDF 的浏览器可使用打开链接。
+Markdown 源文保留在 `_posts/`，用于编辑、首页摘要及订阅。首页、分类和搜索结果通过 front matter 的 `pdf` 字段直接链接到 `assets/pdfs/` 中的 PDF，由浏览器显示。原有文章 URL 自动跳转到对应 PDF；不再显示内嵌阅读器、评论或打开/下载按钮。
 
 需要 Node.js 20+ 和 Chrome / Chromium：
 
@@ -16,7 +16,7 @@ npm run pdf:build
 npm run pdf:check
 ```
 
-macOS 默认使用 `/Applications/Google Chrome.app`，也可通过 `CHROME_PATH` 指定浏览器可执行文件。使用本机中文字体；Linux 建议安装 `fonts-noto-cjk`。
+macOS 默认使用 `/Applications/Google Chrome.app`，也可通过 `CHROME_PATH` 指定浏览器可执行文件。正文和代码统一使用中文宋体（SimSun）、英文 Times New Roman，公式保留 KaTeX 数学字体。生成需要本机安装这些字体；macOS 默认可加载 Microsoft Word 内的 `Simsun.ttc`，也可通过 `SIMSUN_PATH` 指定本机合法字体文件。字体文件不复制到仓库；缺少指定字体时转换会报错。
 
 只更新某一篇：`npm run pdf:build -- interview_code_exam`。生成器会自动更新对应的 `pdf` 字段。提交 Markdown、PDF 及 `assets/pdfs/manifest.json`；线上 Jekyll 直接发布已生成的 PDF，无需运行浏览器。更换转换器、依赖或打印样式后应全量重建。
 

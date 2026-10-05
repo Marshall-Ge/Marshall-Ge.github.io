@@ -1,12 +1,16 @@
 @page { size: A4; margin: 19mm 17mm 20mm; }
-body { font: 11pt/1.75 "PingFang SC", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif; color: #202735; overflow-wrap: anywhere; }
+@font-face { font-family: "Blog Latin"; src: local("Times New Roman"); }
+@font-face { font-family: "Blog Latin"; src: local("TimesNewRomanPS-BoldMT"); font-weight: bold; }
+@font-face { font-family: "Blog Latin"; src: local("TimesNewRomanPS-ItalicMT"); font-style: italic; }
+@font-face { font-family: "Blog Latin"; src: local("TimesNewRomanPS-BoldItalicMT"); font-style: italic; font-weight: bold; }
+body { font: 11pt/1.75 "Blog Latin", "Blog Chinese", serif; color: #202735; overflow-wrap: anywhere; }
 h1 { font-size: 24pt; line-height: 1.4; margin: 0 0 12pt; }
 h2 { font-size: 18pt; } h3 { font-size: 14pt; }
 h1,h2,h3,h4 { break-after: avoid; }
 p { orphans: 3; widows: 3; }
 .metadata { color: #687385; font-size: 10pt; border-bottom: 1px solid #d9dfe8; padding-bottom: 14pt; margin-bottom: 22pt; }
 pre { background: #f3f5f8; border: 1px solid #e0e5eb; padding: 9pt; white-space: pre-wrap; overflow-wrap: anywhere; font-size: 8pt; line-height: 1.5; }
-code { font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace; }
+pre, code { font-family: inherit; }
 :not(pre) > code { font-size: .88em; background: #f3f5f8; }
 img { max-width: 100% !important; max-height: 225mm; object-fit: contain; height: auto; break-inside: avoid; }
 table { border-collapse: collapse; width: 100%; font-size: 9pt; table-layout: fixed; }

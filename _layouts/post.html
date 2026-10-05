@@ -1,56 +1,12 @@
----
-layout: default
----
-
-<article class="posts">
-  
-  <h1>{{ page.title }}</h1>
-
-  <div class="meta">
-    <span class="date">
-      {{ page.date | date: "%Y-%m-%d" }}
-    </span>
-
-    <ul class="tag">
-      {% for tag in page.tags %}
-      <li>
-        <a href="{{ site.url }}{{ site.baseurl }}/tags#{{ tag }}">
-          {{ tag }}
-        </a>
-      </li>
-      {% endfor %}
-    </ul>
-  </div>
-
-  <div class="entry pdf-entry">
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
     {% assign pdf_url = page.pdf | relative_url %}
-    <div class="pdf-actions">
-      <a href="{{ pdf_url }}" target="_blank" rel="noopener">打开 PDF</a>
-      <a href="{{ pdf_url }}" download>下载 PDF</a>
-    </div>
-    <object class="pdf-viewer" data="{{ pdf_url }}#view=FitH" type="application/pdf" aria-label="{{ page.title | escape }} PDF">
-      <p>当前浏览器无法内嵌显示 PDF，请<a href="{{ pdf_url }}">打开文章 PDF</a>阅读。</p>
-    </object>
-  </div>
-
-
-</article>
-
-<div class="pagination">
-  {% if page.previous.url %}
-    <span class="prev" >
-      <a href="{{ site.url }}{{ site.baseurl }}{{ page.previous.url }}">
-        ← {{page.previous.title}}
-      </a>
-    </span>
-  {% endif %}
-  {% if page.next.url %}
-    <span class="next" >
-      <a href="{{ site.url }}{{ site.baseurl }}{{ page.next.url }}">
-        {{page.next.title}} →
-      </a>
-    </span>
-  {% endif %}
-</div>
-
-{% include giscus.html %}
+    <title>{{ page.title | escape }}</title>
+    <link rel="canonical" href="{{ page.pdf | absolute_url }}">
+    <meta http-equiv="refresh" content="0; url={{ pdf_url | escape }}">
+    <script>window.location.replace({{ pdf_url | jsonify }});</script>
+  </head>
+  <body></body>
+</html>
