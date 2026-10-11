@@ -20,6 +20,5 @@ macOS 默认使用 `/Applications/Google Chrome.app`，也可通过 `CHROME_PATH
 
 只更新某一篇：`npm run pdf:build -- interview_code_exam`。生成器会自动更新对应的 `pdf` 字段。提交 Markdown、PDF 及 `assets/pdfs/manifest.json`；线上 Jekyll 直接发布已生成的 PDF，无需运行浏览器。更换转换器、依赖或打印样式后应全量重建。
 
-PDF 包含中文、代码自动换行、图片、KaTeX 公式及页码。`scripts/pdf.css` 控制打印排版。转换时检查图片和公式；未知的缺失图片会中止生成。比特币文章原站的 6 张图片已失效，列在 `scripts/unavailable-images.json`，PDF 中保留缺图说明与来源链接；恢复原图后重新生成即可。
 
 `npm run pdf:check` 校验所有文章的 PDF 映射、文件签名以及正文/元数据/转换器摘要。图片修改后也需重新生成对应 PDF。
