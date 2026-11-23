@@ -73,7 +73,7 @@ function autoExcerpt(src) {
 function parseMeta(src, slug) {
   const meta = {};
   const header = src.slice(0, 2000);
-  const lineRe = /^%\s*([a-z_]+)\s*:\s*(.*)$/gm;
+  const lineRe = /^%[ \t]*([a-z_]+)[ \t]*:[ \t]*(.*)$/gm;
   let m;
   while ((m = lineRe.exec(header))) {
     if (!(m[1] in meta)) meta[m[1]] = m[2].trim();
