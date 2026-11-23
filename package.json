@@ -4,7 +4,12 @@
   "type": "module",
   "scripts": {
     "pdf:build": "node scripts/build-pdfs.mjs",
-    "pdf:check": "node scripts/build-pdfs.mjs --check"
+    "pdf:check": "node scripts/build-pdfs.mjs --check",
+    "tex:build": "node scripts/build-tex.mjs",
+    "tex:check": "node scripts/build-tex.mjs --check",
+    "tex:watch": "node scripts/watch-tex.mjs",
+    "tex:new": "node scripts/new-tex.mjs",
+    "tex:publish": "node scripts/publish-tex.mjs"
   },
   "devDependencies": {
     "gray-matter": "4.0.3",

@@ -1,0 +1,31 @@
+% ---
+% tags: []
+% author: marshall
+% excerpt:
+% ---
+\documentclass[11pt]{article}
+
+\usepackage{fontspec}
+\usepackage{xeCJK}
+% macOS 上 SimSun 位于 Microsoft Word 内部；如需其它字体请修改下面路径
+\setCJKmainfont[Path=/Applications/Microsoft Word.app/Contents/Resources/DFonts/, Extension=.ttc]{Simsun}
+
+\usepackage[a4paper, margin=2.2cm]{geometry}
+\linespread{1.3}
+\setlength{\parskip}{0.3em}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{graphicx}
+% 本文图片统一放在与 .tex 同名的文件夹 latex/<slug>/ 中，直接用文件名引用即可
+\graphicspath{{./}{__IMAGES_DIR__/}}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true, linkcolor=blue, urlcolor=blue}
+
+\title{文章标题}
+\author{Marshall}
+
+\begin{document}
+\maketitle
+
+正文……
+
+\end{document}

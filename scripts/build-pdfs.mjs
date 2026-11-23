@@ -48,6 +48,7 @@ try {
     const sourcePath = path.join(root, '_posts', file);
     const source = await fs.readFile(sourcePath, 'utf8');
     const { data, content } = matter(source);
+    if (data.latex) continue; // LaTeX-sourced posts are built by scripts/build-tex.mjs
     const pdf = `/assets/pdfs/${file.replace(/\.md$/, '.pdf')}`;
     const hash = createHash('sha256').update(content).update(JSON.stringify({ title: data.title, date: data.date, author: data.author })).update(css)
       .update(await fs.readFile(fileURLToPath(import.meta.url))).update(await fs.readFile(path.join(root, 'package-lock.json')))

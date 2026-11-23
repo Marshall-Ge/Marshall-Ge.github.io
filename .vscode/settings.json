@@ -1,0 +1,24 @@
+{
+  "latex-workshop.latex.outDir": "%WORKSPACE_FOLDER%/assets/pdfs",
+  "latex-workshop.latex.autoBuild.run": "onSave",
+  "latex-workshop.latex.autoClean.run": "never",
+  "latex-workshop.latex.tools": [
+    {
+      "name": "tex-build",
+      "command": "/bin/zsh",
+      "args": ["-lc", "node scripts/build-tex.mjs %DOCFILE%"],
+      "cwd": "%WORKSPACE_FOLDER%"
+    }
+  ],
+  "latex-workshop.latex.recipes": [
+    {
+      "name": "tex:build",
+      "tools": ["tex-build"]
+    }
+  ],
+  "latex-workshop.latex.recipe.default": "first",
+  "latex-workshop.view.pdf.viewer": "tab",
+  "workbench.editorAssociations": {
+    "*.pdf": "latex-workshop-pdf-hook"
+  }
+}

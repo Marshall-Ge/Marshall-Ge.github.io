@@ -3,3 +3,7 @@
 _site
 node_modules/
 tmp/
+
+# latex drafts (只有 release 才纳入 git 跟踪)
+latex/drafts/
+assets/pdfs/drafts/
