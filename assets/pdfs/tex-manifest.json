@@ -2,5 +2,21 @@
   "2026-11-23-pd-disaggregation": {
     "pdf": "/assets/pdfs/2026-11-23-pd-disaggregation.pdf",
     "sha256": "8e240c6d91b1e8cf0b364ca4f6005b5b33b7ec0fd2ba77ba2f15395f900345ad"
+  },
+  "2026-11-23-deepinfer-within": {
+    "pdf": "/assets/pdfs/2026-11-23-deepinfer-within.pdf",
+    "sha256": "94b0ef7f6c3a33b8b70bd282379f10574856039361144db900f9b20d81ccebde"
+  },
+  "2026-11-23-deepinfer-beyond": {
+    "pdf": "/assets/pdfs/2026-11-23-deepinfer-beyond.pdf",
+    "sha256": "8731eed095d6e678a855ad1e7ed29abd4335788829a002bd1e787e7a83dc8909"
+  },
+  "2026-11-23-sparse-linear-attention": {
+    "pdf": "/assets/pdfs/2026-11-23-sparse-linear-attention.pdf",
+    "sha256": "e3f5834e248fdec16c0b03d67168d48a03fdaf92d892726a3e092aebfb38ed84"
+  },
+  "2026-11-23-seed-papers-scale": {
+    "pdf": "/assets/pdfs/2026-11-23-seed-papers-scale.pdf",
+    "sha256": "fb2b469a419ec8a5dc9d3a50f51663f3102647d6280d1df9e583aca76fb507aa"
   }
 }
